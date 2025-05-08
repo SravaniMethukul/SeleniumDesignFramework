@@ -7,44 +7,7 @@ It supports both **UI end-to-end testing**, and is organized for clarity, scalab
 
 ## 📁 Project Structure
 
-/project-root
-│
-├── src/
-│   └── main/
-│       └── java/
-|           └── AbstractComponents/   
-|               └── AbstractComponents.java  # Central class to instantiate and return page objects
-│           └── pageObjects/               # POM classes for each web page
-│               ├── ConfirmationPage.java  # Handles confirmation page locators and actions
-│               ├── LandingPage.java    # Handles login page elements
-│               ├── CartPage.java   # Logic for cart page elements
-│               ├── OrderPage.java  # Checkout/order review page logic
-│               ├── PaymentPage.java # payment page logic
-|               └── ProductCataloguePage.java # product catalogue page logic
-|            └── resources/               # utility files
-│               ├── ExtentReporterNG.java  # Handles ExtentReports logic
-│               └── GlobalData.Properties  # defined global properties (eg: browser, headless)
-│
-│   └── test/
-│       └── java/
-|           └── data/
-│              ├── DataReader.java # handles logic to convert json into hashmap list
-│              └── PurchaseOrder.json # defined json data for purchase order
-|           └── testComponents/
-│               ├── BaseTest.java # Central class to instantiate browser and other common tests (like AfterMethod , BeforeMethod)
-│               ├── Listeners.java # listener for extent reporting
-|               └── Retry.java # listerner for retry of execution of tests
-│           └── tests/      # Test cases organized by feature or module
-│               ├── ErrorValidationTest.java  # test for error validation negative scenarios
-│               ├── StandaloneTest.java # Full order flow test
-│               └── SubmitOrderTest.java # test for submitting order with POM concepts
-|
-├── testSuites/  # Test suite configuration file (TestNG)
-|   ├── ErrorValidationTests.xml    # xml to run error validation group tests
-│   ├── Purchase.xml # run purchase order group tests
-│   └── testng.xml # common all tests execution
-|
-├── pom.xml    # Maven configuration (dependencies, build plugins)
+<pre lang="markdown"> <code>```plaintext /project-root │ ├── src/ │ └── main/ │ └── java/ │ ├── AbstractComponents/ │ │ └── AbstractComponents.java # Central class to instantiate and return page objects │ │ │ ├── pageObjects/ # POM classes for each web page │ │ ├── ConfirmationPage.java # Handles confirmation page locators and actions │ │ ├── LandingPage.java # Handles login page elements │ │ ├── CartPage.java # Logic for cart page elements │ │ ├── OrderPage.java # Checkout/order review page logic │ │ ├── PaymentPage.java # Payment page logic │ │ └── ProductCataloguePage.java # Product catalogue page logic │ │ └── resources/ # Utility files │ ├── ExtentReporterNG.java # ExtentReports setup │ └── GlobalData.properties # Global config (e.g., browser type) │ │ └── test/ │ └── java/ │ ├── data/ │ │ ├── DataReader.java # Converts JSON into HashMap list │ │ └── PurchaseOrder.json # Test data for purchase order │ │ ├── testComponents/ │ │ ├── BaseTest.java # WebDriver setup, hooks │ │ ├── Listeners.java # Extent listener │ │ └── Retry.java # Retry logic for failed tests │ │ └── tests/ # Test classes │ ├── ErrorValidationTest.java # Negative scenario validation │ ├── StandaloneTest.java # Demo/test example │ └── SubmitOrderTest.java # Full order test flow │ ├── testSuites/ # TestNG suite configurations │ ├── ErrorValidationTests.xml │ ├── Purchase.xml │ └── testng.xml │ └── pom.xml # Maven project file ```</code> </pre>
 
 
 
