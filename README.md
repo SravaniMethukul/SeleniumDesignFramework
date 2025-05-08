@@ -7,8 +7,48 @@ It supports both **UI end-to-end testing**, and is organized for clarity, scalab
 
 ## 📁 Project Structure
 
-<pre lang="markdown"> <code>```plaintext /project-root │ ├── src/ │ └── main/ │ └── java/ │ ├── AbstractComponents/ │ │ └── AbstractComponents.java # Central class to instantiate and return page objects │ │ │ ├── pageObjects/ # POM classes for each web page │ │ ├── ConfirmationPage.java # Handles confirmation page locators and actions │ │ ├── LandingPage.java # Handles login page elements │ │ ├── CartPage.java # Logic for cart page elements │ │ ├── OrderPage.java # Checkout/order review page logic │ │ ├── PaymentPage.java # Payment page logic │ │ └── ProductCataloguePage.java # Product catalogue page logic │ │ └── resources/ # Utility files │ ├── ExtentReporterNG.java # ExtentReports setup │ └── GlobalData.properties # Global config (e.g., browser type) │ │ └── test/ │ └── java/ │ ├── data/ │ │ ├── DataReader.java # Converts JSON into HashMap list │ │ └── PurchaseOrder.json # Test data for purchase order │ │ ├── testComponents/ │ │ ├── BaseTest.java # WebDriver setup, hooks │ │ ├── Listeners.java # Extent listener │ │ └── Retry.java # Retry logic for failed tests │ │ └── tests/ # Test classes │ ├── ErrorValidationTest.java # Negative scenario validation │ ├── StandaloneTest.java # Demo/test example │ └── SubmitOrderTest.java # Full order test flow │ ├── testSuites/ # TestNG suite configurations │ ├── ErrorValidationTests.xml │ ├── Purchase.xml │ └── testng.xml │ └── pom.xml # Maven project file ```</code> </pre>
-
+/project-root
+│
+├── src/
+│   └── main/
+│       └── java/
+│           ├── AbstractComponents/
+│           │   └── AbstractComponents.java              # Base class to manage and return page objects
+│           │
+│           ├── pageObjects/                             # Page Object Model (POM) classes
+│           │   ├── CartPage.java                         # Logic for cart page
+│           │   ├── ConfirmationPage.java                 # Confirmation page locators/actions
+│           │   ├── LandingPage.java                      # Login page elements
+│           │   ├── OrderPage.java                        # Checkout/order review logic
+│           │   ├── PaymentPage.java                      # Payment page handling
+│           │   └── ProductCataloguePage.java             # Product catalog interaction
+│           │
+│           └── resources/                               # Utility & config files
+│               ├── ExtentReporterNG.java                # ExtentReports configuration
+│               └── GlobalData.properties                # Global settings (e.g., browser, URL)
+│
+│   └── test/
+│       └── java/
+│           ├── data/
+│           │   ├── DataReader.java                      # Reads data from JSON to HashMap
+│           │   └── PurchaseOrder.json                   # JSON test data for purchase flow
+│
+│           ├── testComponents/
+│           │   ├── BaseTest.java                        # WebDriver setup/teardown
+│           │   ├── Listeners.java                       # ExtentReport TestNG listener
+│           │   └── Retry.java                           # Retry logic for flaky tests
+│
+│           └── tests/                                   # Actual test classes
+│               ├── ErrorValidationTest.java             # Tests for invalid scenarios
+│               ├── StandaloneTest.java                  # Example standalone test
+│               └── SubmitOrderTest.java                 # End-to-end purchase test
+│
+├── testSuites/                                          # TestNG suite XMLs
+│   ├── ErrorValidationTests.xml                         # Runs validation tests
+│   ├── Purchase.xml                                     # Runs order placement tests
+│   └── testng.xml                                       # Master suite file
+│
+└── pom.xml                                              # Maven project config (dependencies, plugins)
 
 
 ---
@@ -57,15 +97,10 @@ It supports both **UI end-to-end testing**, and is organized for clarity, scalab
 ## 🚀 Getting Started
 
 ### 1. Install Dependencies
-```bash
 mvn clean install
 
 ### 2. Run All tests
 mvn test
 
-### 3. Run Specific Suite
-mvn test -P profileNameFromPom.xml (eg: mvn test -P Purchase)
-
-
-
-
+### 3. Run specific suite
+mvn test -P ProfileNameFromPom (eg: mvn test -P Purchase)
