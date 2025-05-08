@@ -12,34 +12,6 @@ This project is a Java-based Selenium test automation framework following the **
 
 /project-root
 │
-├── pageobjects/
-│    ├── login.page.js
-│    ├── dashboard.page.js
-│    ├── cart.page.js
-│    ├── order_review.page.js
-│    └── POManager.js
-│
-├── tests/
-│    ├── e2e_tests/
-│    │    ├── client_app_order_workflow.spec.js
-│    │    └── practice_website.spec.js
-│    └── api_tests/
-│         ├── api_login.spec.js
-│         ├── api_order_creation.spec.js
-│         └── order_interception.spec.js
-│
-├── utils/
-│    ├── api_utils.js
-│    └── client_app_test_data.json
-│
-├── package.json
-└── playwright.config.js
-
-
-
-
-/project-root
-│
 ├── src/
 │   └── main/
 │       └── java/
