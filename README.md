@@ -1,11 +1,42 @@
-# 🧪 Selenium Design Framework (Java)
+# 🧪 Ecommerce Automation Framework with Selenium Design Framework (Java, TestNG, Maven)
 
-This project is a Java-based Selenium test automation framework following the **Page Object Model (POM)** design pattern. 
-It supports both **UI end-to-end testing**, and is organized for clarity, scalability, and maintainability.
+
+Overview
+The Ecommerce Automation Framework is a Playwright-based test automation setup designed to test an ecommerce application. It includes end-to-end tests, API tests, validation tests, and reusable utilities. The framework is modular, scalable, and easy to use for both beginners and experienced testers.
+
+This project is a Java-based Selenium test automation framework following the **Page Object Model (POM)** design pattern. The Framework is a Selenium based test automation setup designed to test an ecommerce application. It supports both **UI end-to-end testing**, and is organized for clarity, scalability, and maintainability.
 
 ---
 
 ## 📁 Project Structure
+
+/project-root
+│
+├── pageobjects/
+│    ├── login.page.js
+│    ├── dashboard.page.js
+│    ├── cart.page.js
+│    ├── order_review.page.js
+│    └── POManager.js
+│
+├── tests/
+│    ├── e2e_tests/
+│    │    ├── client_app_order_workflow.spec.js
+│    │    └── practice_website.spec.js
+│    └── api_tests/
+│         ├── api_login.spec.js
+│         ├── api_order_creation.spec.js
+│         └── order_interception.spec.js
+│
+├── utils/
+│    ├── api_utils.js
+│    └── client_app_test_data.json
+│
+├── package.json
+└── playwright.config.js
+
+
+
 
 /project-root
 │
