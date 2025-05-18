@@ -10,6 +10,7 @@ This project is a Java-based Selenium test automation framework following the **
 
 ## 📁 Project Structure
 
+```text
 /project-root
 │
 ├── src/
@@ -52,7 +53,7 @@ This project is a Java-based Selenium test automation framework following the **
 │   └── testng.xml                                       # Master suite file
 │
 └── pom.xml                                              # Maven project config (dependencies, plugins)
-
+```
 
 ---
 
