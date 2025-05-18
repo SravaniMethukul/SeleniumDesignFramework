@@ -1,4 +1,4 @@
-# 🧪 Ecommerce Automation Framework with Selenium Design Framework (Java, TestNG, Maven)
+# 🧪 Ecommerce Automation Framework with Selenium Design Framework (Java, TestNG, Maven, Jenkins (CI/CD))
 
 
 Overview
@@ -95,6 +95,7 @@ This project is a Java-based Selenium test automation framework following the **
 - **Maven**
 - **Extent Reports**
 - **Jackson / Gson** (for JSON parsing)
+- **Jenkins**(for CI/CD)
 
 ---
 
