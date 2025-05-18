@@ -2,7 +2,7 @@
 
 
 Overview
-The Ecommerce Automation Framework is a Playwright-based test automation setup designed to test an ecommerce application. It includes end-to-end tests, API tests, validation tests, and reusable utilities. The framework is modular, scalable, and easy to use for both beginners and experienced testers.
+The Ecommerce Automation Framework is a Selenium-based test automation setup designed to test an ecommerce application. It includes end-to-end tests, API tests, validation tests, and reusable utilities. The framework is modular, scalable, and easy to use for both beginners and experienced testers.
 
 This project is a Java-based Selenium test automation framework following the **Page Object Model (POM)** design pattern. The Framework is a Selenium based test automation setup designed to test an ecommerce application. It supports both **UI end-to-end testing**, and is organized for clarity, scalability, and maintainability.
 
