@@ -36,7 +36,16 @@ This project is a Java-based Selenium test automation framework following the **
 │           ├── data/
 │           │   ├── DataReader.java                      # Reads data from JSON to HashMap
 │           │   └── PurchaseOrder.json                   # JSON test data for purchase flow
+|
+|           ├── cucumber/
+│           │   ├── TestNGTestRunner.java                # TestRunner for cucumber feature files
+│           │   └── ErrorValidation.feature              # feature file for error validation
+│           │   └── SubmitOrder.feature                  # feature file for submit order
 │
+│           ├── stepDefinitions/
+│           │   ├── ErrorValidationStepDefinition.java    # Step Definitions for Error Validation
+│           │   ├── StepDefinitionImplementation.java     # Step Definition for Submit Order
+|
 │           ├── testComponents/
 │           │   ├── BaseTest.java                        # WebDriver setup/teardown
 │           │   ├── Listeners.java                       # ExtentReport TestNG listener
