@@ -105,6 +105,7 @@ This project is a Java-based Selenium test automation framework following the **
 - **Extent Reports**
 - **Jackson / Gson** (for JSON parsing)
 - **Jenkins**(for CI/CD)
+- **Cucumber** (Basic understanding of writion feature and step definition and test runner files)
 
 ---
 
@@ -118,3 +119,6 @@ mvn test
 
 ### 3. Run specific suite
 mvn test -P ProfileNameFromPom (eg: mvn test -P Purchase)
+
+### 4. To run cucumber tests
+mvn test -P Cucumbertests
