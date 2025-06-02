@@ -121,4 +121,4 @@ mvn test
 mvn test -P ProfileNameFromPom (eg: mvn test -P Purchase)
 
 ### 4. To run cucumber tests
-mvn test -P Cucumbertests
+mvn test -P CucumberTests
